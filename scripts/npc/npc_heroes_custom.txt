@@ -9,10 +9,10 @@
 	"castlewars_assassin"
 	{
 		"override_hero"				"npc_dota_hero_phantom_assassin"			// Hero to override
-		"Ability1"					""		// Ability 1
-		"Ability2"					""		// Ability 2
-		"Ability3"					""		// Ability 3
-		"Ability4"					""		// Ability 4
+		"Ability1"					"castlewars_assassin_evasion"				// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					"castlewars_assassin_culling_blade"			// Ability 4
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 }

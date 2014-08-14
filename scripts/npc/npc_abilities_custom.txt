@@ -3,5 +3,111 @@
 {
 	"Version"		"1"
 
-	
+	//Assassin: Blur
+	"castlewars_assassin_evasion"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"phantom_assassin_blur"
+
+		"Modifiers"
+		{
+			"modifier_assassin_evasion"
+			{
+				"IsHidden"		"1"
+				"Passive"		"1"
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"evasion"		"10 15 20 25"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Assassin: Culling Blade
+	//=================================================================================================================
+	"castlewars_assassin_culling_blade"
+	{
+		"BaseClass"						"axe_culling_blade"
+		"ID"							"5010"														
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"		
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0 1 2"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20"		
+		
+		// Cast Range
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"150"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"kill_threshold"			"250 350 450"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"150 250 300"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed_bonus"				"40"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"speed_duration"			"6"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"speed_aoe"					"900"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown_scepter"			"6.0 6.0 6.0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"kill_threshold_scepter"	"300 450 625"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"speed_duration_scepter"	"10"
+			}
+		}
+	}	
+
 }

@@ -4,7 +4,8 @@ if CAddonTemplateGameMode == nil then
 	CAddonTemplateGameMode = class({})
 end
 
-function Precache( context )
+function Precache(context)
+	PrecacheUnitByNameSync("npc_dota_hero_axe", context);
 	--[[
 		Precache things we know we'll use.  Possible file types include (but not limited to):
 			PrecacheResource( "model", "*.vmdl", context )
