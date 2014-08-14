@@ -35,7 +35,7 @@
 			{
 				"Target"	"TARGET"
 			}
-			"ApplyModifer"
+			"ApplyModifier"
 			{
 				"Target"	"TARGET"
 				"ModifierName"	"modifier_assassin_backstab_slow"
