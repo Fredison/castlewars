@@ -3,7 +3,63 @@
 {
 	"Version"		"1"
 
-	//Assassin: Blur
+
+//Assassin: Backstab
+	"castlewars_assassin_backstab"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"			"phantom_assassin_blur"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityManaCost"				"50 75 100 125"
+		"AbilityCooldown"				"10"
+		"AbilityCastRange"				"500 600 700 800"
+
+		"Modifiers"
+		{
+			"modifier_assassin_backstab_slow"
+			{
+				"Duration"		"%duration"
+				"IsDebuff"		"1"
+				"Properties" 
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%slow"
+				}
+			}
+		}
+		"OnSpellStart"
+		{
+			"Blink"
+			{
+				"Target"	"TARGET"
+			}
+			"ApplyModifer"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"modifier_assassin_backstab_slow"
+			}
+		}
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"duration"		"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"slow"			"-10 -15 -20 -25"
+			}
+		}
+	}
+
+
+	//Assassin: Evasion
 	"castlewars_assassin_evasion"
 	{
 		"BaseClass"				"ability_datadriven"
@@ -13,6 +69,40 @@
 		"Modifiers"
 		{
 			"modifier_assassin_evasion"
+			{
+				"IsHidden"		"1"
+				"Passive"		"1"
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
+				}
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"evasion"		"10 15 20 25"
+			}
+		}
+	}
+
+
+
+
+
+	//Assassin: Shadow Stealth
+	"castlewars_assassin_shadow_stealth"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"phantom_assassin_blur"
+
+		"Modifiers"
+		{
+			"modifier_assassin_shadow_stealth"
 			{
 				"IsHidden"		"1"
 				"Passive"		"1"
