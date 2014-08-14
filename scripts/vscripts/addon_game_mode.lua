@@ -24,6 +24,7 @@ end
 function CAddonTemplateGameMode:InitGameMode()
 	print( "Template addon is loaded." )
 	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	GameRules:SetSameHeroSelectionEnabled(true);
 end
 
 -- Evaluate the state of the game
