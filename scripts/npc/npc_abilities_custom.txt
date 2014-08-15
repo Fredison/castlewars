@@ -200,6 +200,13 @@
 		}
 	}	
 
+}
+
+
+// Add Stealth
+// 
+
+
 
 
 
@@ -217,13 +224,20 @@
 		"AbilityCooldown"				"8"
 		"AbilityCastRange"				"400 450 500 550"
 
-		
+		"Modifiers"
+		{
+			"modifier_assassin_backstab_slow"
+			{
+				"Duration"		"%duration"
+				
+			}
+		}
 		"OnSpellStart"
 		{
 			"Heal"
 			{
 				"Target"		"TARGET"
-				"HealAmount"	"%heal"
+				"HealAmount"	"100 175 250 325"
 			}
 			
 		}
@@ -234,257 +248,8 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"heal"			"100 200 300 400"
+				"duration"		"1.5"
 			}
 			
 		}
 	}
-
-
-	//Paladin: Shiny
-	"castlewars_paladin_shiny"
-	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_AOE"
-		"AbilityTextureName"			"omniknight_purification"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_FRIENDLY"
-		"AbilityManaCost"				"20"
-		"AbilityCooldown"				"0"
-		
-
-		
-		"Modifiers"
-		{
-			"modifier_paladin_shinyheal"
-			{
-				"Aura"			"true"
-				"Aura_Radius"	"500"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%heal"
-				}
-
-			}
-
-
-
-		}
-
-
-
-
-
-
-		"OnToggleOn"
-		{
-			"ApplyModifer"
-			{
-				"Target"	"TARGET"
-				"ModifierName"	"modifier_paladin_shinyheal"
-			}
-
-
-		}
-
-
-		
-	}
-
-	"AbilitySpecial"
-	{
-
-		"01"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"heal"				"15"
-		}
-	}
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//Paladin: Heal
-	"castlewars_paladin_spawn"
-	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName"			"satyr_trickster_purge"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_NONE"
-		"AbilityManaCost"				"200"
-		"AbilityCooldown"				"30"
-		"AbilityCastRange"				"800"
-
-		
-	
-
-		"SpawnUnit"
-		{
-			"Ranger"	"npc_dota_hero_windrunner"
-			"Target" TARGETKEY
-			"Duration"	"120"
-			"UnitCount"		"1"
-			"OnSpawn"
-			{
-				
-			}
-		}
-
-		
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
