@@ -217,7 +217,7 @@
 	{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityTextureName"			"omniknight_purify"
+		"AbilityTextureName"			"omniknight_purification"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityManaCost"				"80 100 120 140"
@@ -229,7 +229,6 @@
 			"modifier_assassin_backstab_slow"
 			{
 				"Duration"		"%duration"
-				"IsHidden"		"1"
 				
 			}
 		}
