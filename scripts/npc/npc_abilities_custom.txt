@@ -201,3 +201,66 @@
 	}	
 
 }
+
+
+// Add Stealth
+// 
+
+
+
+
+
+
+
+//Paladin: Heal
+	"castlewars_paladin_heal"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"			"omniknight_purify"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityManaCost"				"80 100 120 140"
+		"AbilityCooldown"				"8"
+		"AbilityCastRange"				"400 450 500 550"
+
+		"Modifiers"
+		{
+			"modifier_assassin_backstab_slow"
+			{
+				"Duration"		"%duration"
+				"IsDebuff"		"1"
+				"Properties" 
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%slow"
+				}
+			}
+		}
+		"OnSpellStart"
+		{
+			"Blink"
+			{
+				"Target"	"TARGET"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"modifier_assassin_backstab_slow"
+			}
+		}
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"duration"		"1 2 3 4"
+			}
+			"02"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"slow"			"-10 -15 -20 -25"
+			}
+		}
+	}
