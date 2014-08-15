@@ -241,70 +241,40 @@
 	}
 
 
-	//Paladin: Shiny
-	"castlewars_paladin_shiny"
-	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_AOE"
-		"AbilityTextureName"			"omniknight_purification"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_FRIENDLY"
-		"AbilityManaCost"				"20"
-		"AbilityCooldown"				"0"
-		
 
-		
+
+	//Paladin: Shield
+	"castlewars_paladin_shield"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"phantom_assassin_blur"
+
 		"Modifiers"
 		{
-			"modifier_paladin_shinyheal"
+			"modifier_assassin_evasion"
 			{
-				"Aura"			"true"
-				"Aura_Radius"	"500"
+				"IsHidden"		"1"
+				"Passive"		"1"
 				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%heal"
+				{	
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
 				}
-
 			}
-
-
-
 		}
 
-
-
-
-
-
-		"OnToggleOn"
+		"AbilitySpecial"
 		{
-			"ApplyModifer"
+			"01"
 			{
-				"Target"	"TARGET"
-				"ModifierName"	"modifier_paladin_shinyheal"
+				"var_type"		"FIELD_INTEGER"
+				"evasion"		"10 15 20 25"
 			}
-
-
-		}
-
-
-		
-	}
-
-	"AbilitySpecial"
-	{
-
-		"01"
-		{
-			"var_type"			"FIELD_INTEGER"
-			"heal"				"15"
 		}
 	}
-
 
 
 	
-
 
 
 
