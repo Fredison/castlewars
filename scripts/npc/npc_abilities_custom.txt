@@ -229,24 +229,18 @@
 			"modifier_assassin_backstab_slow"
 			{
 				"Duration"		"%duration"
-				"IsDebuff"		"1"
-				"Properties" 
-				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%slow"
-				}
+				"IsHidden"		"1"
+				
 			}
 		}
 		"OnSpellStart"
 		{
-			"Blink"
+			"Heal"
 			{
-				"Target"	"TARGET"
+				"Target"		"TARGET"
+				"HealAmount"	"100 175 250 325"
 			}
-			"ApplyModifier"
-			{
-				"Target"	"TARGET"
-				"ModifierName"	"modifier_assassin_backstab_slow"
-			}
+			
 		}
 
 
@@ -255,12 +249,8 @@
 			"01"
 			{
 				"var_type"		"FIELD_INTEGER"
-				"duration"		"1 2 3 4"
+				"duration"		"1.5"
 			}
-			"02"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"slow"			"-10 -15 -20 -25"
-			}
+			
 		}
 	}
