@@ -124,9 +124,9 @@
 	}
 
 	//=================================================================================================================
-	// Assassin: Culling Blade
+	// Assassin: Assasinate
 	//=================================================================================================================
-	"castlewars_assassin_culling_blade"
+	"castlewars_assassin_assassinate"
 	{
 		"BaseClass"						"axe_culling_blade"
 		"ID"							"5010"														
@@ -243,39 +243,9 @@
 
 
 
-	//Paladin: Shield
-	"castlewars_paladin_shield"
-	{
-		"BaseClass"				"ability_datadriven"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"	"phantom_assassin_blur"
-
-		"Modifiers"
-		{
-			"modifier_assassin_evasion"
-			{
-				"IsHidden"		"1"
-				"Passive"		"1"
-				"Properties"
-				{	
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
-				}
-			}
-		}
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"evasion"		"10 15 20 25"
-			}
-		}
-	}
 
 
 	
-
 
 
 

@@ -12,7 +12,7 @@
 		"Ability1"					"castlewars_assassin_backstab"				// Ability 1
 		"Ability2"					"castlewars_assassin_evasion"				// Ability 2
 		"Ability3"					"castlewars_assassin_shadow_stealth"		// Ability 3
-		"Ability4"					"castlewars_assassin_culling_blade"			// Ability 4
+		"Ability4"					"castlewars_assassin_assassinate"			// Ability 4
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
@@ -37,8 +37,8 @@
 		"override_hero"				"npc_dota_hero_omniknight"					// Hero to override
 		"Ability1"					"castlewars_paladin_heal"					// Ability 1
 		"Ability2"					"castlewars_paladin_shiny"					// Ability 2
-		"Ability3"					"castlewars_paladin_shield"					// Ability 3
-		"Ability4"					"castlewars_paladin_holy_blessing"		    // Ability 4
+		"Ability3"					"castlewars_paladin_holy_blessing"			// Ability 3
+		"Ability4"					"castlewars_paladin_shield"				    // Ability 4
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
