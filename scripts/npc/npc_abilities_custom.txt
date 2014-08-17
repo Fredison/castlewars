@@ -124,9 +124,9 @@
 	}
 
 	//=================================================================================================================
-	// Assassin: Assasinate
+	// Assassin: Assassinate
 	//=================================================================================================================
-	"castlewars_assassin_assassinate"
+	"castlewars_assassinate"
 	{
 		"BaseClass"						"axe_culling_blade"
 		"ID"							"5010"														
@@ -205,7 +205,7 @@
 
 
 
-//Paladin: Heal
+	//Paladin: Heal
 	"castlewars_paladin_heal"
 	{
 		"BaseClass"						"ability_datadriven"
@@ -243,188 +243,86 @@
 
 
 
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//Paladin: Heal
-	"castlewars_paladin_spawn"
+	//Paladin: Shield
+	"castlewars_paladin_shield"
 	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName"			"satyr_trickster_purge"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_NONE"
-		"AbilityManaCost"				"200"
-		"AbilityCooldown"				"30"
-		"AbilityCastRange"				"800"
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	"Paladin_Shield"
 
-		
-	
-
-		"SpawnUnit"
+		"Modifiers"
 		{
-			"Ranger"	"npc_dota_hero_windrunner"
-			"Target" TARGETKEY
-			"Duration"	"120"
-			"UnitCount"		"1"
-			"OnSpawn"
+			"modifier_assassin_evasion"
 			{
-				
+				"IsHidden"		"1"
+				"Passive"		"1"
+				"Properties"
+				{	
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
+				}
 			}
 		}
 
-		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"evasion"		"10 15 20 25"
+			}
+		}
 	}
 
+	//=================================================================================================================
+	// Paladin: Shiny
+	//=================================================================================================================
+	"castlewars_paladin_shiny"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	"Paladin_Shiny"
 
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0"
 
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"20 30 40 50"		
 
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+			"modifier_paladin_shiny"
+			{
+				"Duration"		"%duration"
+				"Aura"			"%radius"
+				"Properties" 
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"		"%heal"
+				}
+			}
+		}		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"duration"					"8.0 12.0 16.0 20.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"500"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"heal"						"16 24 32 40"
+			}
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
+	}
 }
