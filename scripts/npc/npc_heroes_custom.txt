@@ -79,6 +79,7 @@
 		"Ability2"					""											// Ability 2
 		"Ability3"					""											// Ability 3
 		"Ability4"					""											// Ability 4
+		"Ability5"					""											// Ability 5
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
@@ -105,6 +106,7 @@
 		"Ability2"					""											// Ability 2
 		"Ability3"					""											// Ability 3
 		"Ability4"					""											// Ability 4
+		"Ability5"					""											// Ability 5
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
@@ -131,6 +133,8 @@
 		"Ability2"					""											// Ability 2
 		"Ability3"					""											// Ability 3
 		"Ability4"					""											// Ability 4
+		"Ability5"					""											// Ability 3
+		"Ability6"					""											// Ability 4
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
