@@ -17,11 +17,92 @@
 	}
 
 	//=================================================================================================================
-	// HERO: Alchemist
+	// HERO: Archer
+	//=================================================================================================================
+	"castlewars_archer"
+	{
+		"override_hero"				"npc_dota_hero_windrunner"					// Hero to override
+		"Ability1"					"castlewars_archer_volley"					// Ability 1
+		"Ability2"					"castlewars_archer_call_to_arms"			// Ability 2
+		"Ability3"					"castlewars_archer_steady_aim"				// Ability 3
+		"Ability4"					"castlewars_archer_concussive_blow"			// Ability 4
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Beast Master
+	//=================================================================================================================
+	"castlewars_beast_master"
+	{
+		"override_hero"				"npc_dota_hero_beastmaster"					// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"Ability5"					""											// Ability 5
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Berserker
+	//=================================================================================================================
+	"castlewars_berserker"
+	{
+		"override_hero"				"npc_dota_hero_huskar"						// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Chemist
 	//=================================================================================================================
 	"castlewars_alchemist"
 	{
 		"override_hero"				"npc_dota_hero_alchemist"					// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Cleric
+	//=================================================================================================================
+	"castlewars_cleric"
+	{
+		"override_hero"				"npc_dota_hero_chen"						// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"Ability5"					""											// Ability 5
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+
+	//=================================================================================================================
+	// HERO: Engineer
+	//=================================================================================================================
+	"castlewars_engineer"
+	{
+		"override_hero"				"npc_dota_hero_tinker"						// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+
+	//=================================================================================================================
+	// HERO: Knight
+	//=================================================================================================================
+	"castlewars_knight"
+	{
+		"override_hero"				"npc_dota_hero_dragon_knight"				// Hero to override
 		"Ability1"					""											// Ability 1
 		"Ability2"					""											// Ability 2
 		"Ability3"					""											// Ability 3
@@ -42,20 +123,6 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
-	
-	//=================================================================================================================
-	// HERO: Archer
-	//=================================================================================================================
-	"castlewars_archer"
-	{
-		"override_hero"				"npc_dota_hero_windrunner"					// Hero to override
-		"Ability1"					"castlewars_archer_volley"					// Ability 1
-		"Ability2"					"castlewars_archer_call_to_arms"			// Ability 2
-		"Ability3"					"castlewars_archer_steady_aim"				// Ability 3
-		"Ability4"					"castlewars_archer_concussive_blow"			// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
-
 	//=================================================================================================================
 	// HERO: Scout
 	//=================================================================================================================
@@ -69,12 +136,25 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
-		//=================================================================================================================
-	// HERO: Cleric
 	//=================================================================================================================
-	"castlewars_cleric"
+	// HERO: Sorceror
+	//=================================================================================================================
+	"castlewars_sorceror"
 	{
-		"override_hero"				"npc_dota_hero_chen"						// Hero to override
+		"override_hero"				"npc_dota_hero_warlock"						// Hero to override
+		"Ability1"					""											// Ability 1
+		"Ability2"					""											// Ability 2
+		"Ability3"					""											// Ability 3
+		"Ability4"					""											// Ability 4
+		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
+	}
+	
+	//=================================================================================================================
+	// HERO: Warlord
+	//=================================================================================================================
+	"castlewars_warlord"
+	{
+		"override_hero"				"npc_dota_hero_troll_warlord"				// Hero to override
 		"Ability1"					""											// Ability 1
 		"Ability2"					""											// Ability 2
 		"Ability3"					""											// Ability 3
@@ -83,47 +163,7 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
-		//=================================================================================================================
-	// HERO: Knight
 	//=================================================================================================================
-	"castlewars_knight"
-	{
-		"override_hero"				"npc_dota_hero_dragon_knight"				// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
-
-		//=================================================================================================================
-	// HERO: Beastmaster
-	//=================================================================================================================
-	"castlewars_beastmaster"
-	{
-		"override_hero"				"npc_dota_hero_beastmaster"					// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"Ability5"					""											// Ability 5
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
-
-		//=================================================================================================================
-	// HERO: Engineer
-	//=================================================================================================================
-	"castlewars_engineer"
-	{
-		"override_hero"				"npc_dota_hero_tinker"						// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
-
-		//=================================================================================================================
 	// HERO: Wizard
 	//=================================================================================================================
 	"castlewars_wizard"
@@ -138,44 +178,7 @@
 		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
 	}
 
-		//=================================================================================================================
-	// HERO: Sorceror
-	//=================================================================================================================
-	"castlewars_sorceror"
-	{
-		"override_hero"				"npc_dota_hero_warlock"						// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
 
-		//=================================================================================================================
-	// HERO: Berserker
-	//=================================================================================================================
-	"castlewars_berserker"
-	{
-		"override_hero"				"npc_dota_hero_huskar"						// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
-
-		//=================================================================================================================
-	// HERO: Warlord
-	//=================================================================================================================
-	"castlewars_warlord"
-	{
-		"override_hero"				"npc_dota_hero_troll_warlord"				// Hero to override
-		"Ability1"					""											// Ability 1
-		"Ability2"					""											// Ability 2
-		"Ability3"					""											// Ability 3
-		"Ability4"					""											// Ability 4
-		"VisionNighttimeRange"		"1800"										// Range of vision at night time.
-	}
 
 }
 

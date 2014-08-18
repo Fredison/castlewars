@@ -280,32 +280,19 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"				"ability_datadriven"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityTextureName"	"Paladin_Shiny"
+		"ID"					"5139"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"				"witch_doctor_voodoo_restoration"
+		"AbilityTextureName"	"paladin_shiny"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"30.0 25.0 20.0 15.0"
+		"AbilityCooldown"				"0.0 0.0 0.0 0.0"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"20 30 40 50"	
+		"AbilityManaCost"				"20 30 40 50"		
 
-		// Modifiers
-		//-------------------------------------------------------------------------------------------------------------	
-		"Modifiers"
-		{
-			"modifier_paladin_shiny"
-			{
-				"Duration"		"%duration"
-				"Aura"			"%radius"
-				"Properties" 
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"		"%heal"
-				}
-			}
-		}		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -313,7 +300,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"duration"					"8.0 12.0 16.0 20.0"
+				"mana_per_second"			"8 12 16 20"
 			}
 			"02"
 			{
@@ -325,7 +312,11 @@
 				"var_type"					"FIELD_INTEGER"
 				"heal"						"16 24 32 40"
 			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"heal_interval"				"0.33 0.33 0.33 0.33"
+			}
 		}
-
 	}
 }
