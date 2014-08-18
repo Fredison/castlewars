@@ -3,8 +3,11 @@
 {
 	"Version"		"1"
 
+//ASSASSIN
 
-//Assassin: Backstab
+	//=================================================================================================================
+	// Assassin: Backstab
+	//=================================================================================================================
 	"castlewars_assassin_backstab"
 	{
 		"BaseClass"						"ability_datadriven"
@@ -59,8 +62,10 @@
 	}
 
 
-	//Assassin: Evasion
-	"castlewars_assassin_evasion"
+	//=================================================================================================================
+	// Assassin: Fancy Footwork
+	//=================================================================================================================
+	"castlewars_assassin_fancy_footwork"
 	{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -93,7 +98,9 @@
 
 
 
-	//Assassin: Shadow Stealth
+	//=================================================================================================================
+	// Assassin: Shadow Stealth
+	//=================================================================================================================
 	"castlewars_assassin_shadow_stealth"
 	{
 		"BaseClass"				"ability_datadriven"
@@ -202,11 +209,13 @@
 
 
 
+//PALADIN
 
 
-
-	//Paladin: Heal
-	"castlewars_paladin_heal"
+	//=================================================================================================================
+	// Paladin: Revivify
+	//=================================================================================================================
+	"castlewars_paladin_revivify"
 	{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -243,40 +252,34 @@
 
 
 
-	//Paladin: Shield
-	"castlewars_paladin_shield"
+	//=================================================================================================================
+	// Paladin: Summon Light Guardian
+	//=================================================================================================================
+	"castlewars_paladin_summon_light_guardian"
 	{
 		"BaseClass"				"ability_datadriven"
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"	"Paladin_Shield"
 
-		"Modifiers"
+		"OnSpellStart"
 		{
-			"modifier_assassin_evasion"
-			{
-				"IsHidden"		"1"
-				"Passive"		"1"
-				"Properties"
-				{	
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"	"%evasion"
-				}
-			}
+			"RunScript"
+     			{
+      				"ScriptFile"  "scripts/vscripts/abilities.lua"
+      				"Function"   "SpawnLightGuardian"
+     			}
 		}
 
 		"AbilitySpecial"
 		{
-			"01"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"evasion"		"10 15 20 25"
-			}
+
 		}
 	}
 
 	//=================================================================================================================
-	// Paladin: Shiny
+	// Paladin: Holy Blessing
 	//=================================================================================================================
-	"castlewars_paladin_shiny"
+	"castlewars_paladin_holy_blessing"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -321,6 +324,189 @@
 	}
 
 
+	//=================================================================================================================
+	// Paladin: Redemption
+	//=================================================================================================================
+
+
+//ARCHER
+
+	//=================================================================================================================
+	// Archer: 
+	//=================================================================================================================
+	"castlewars_archer_"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityTextureName"			"omniknight_purification"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityManaCost"				"80 100 120 140"
+		"AbilityCooldown"				"8"
+		"AbilityCastRange"				"400 450 500 550"
+
+		
+		"OnSpellStart"
+		{
+			"Heal"
+			{
+				"Target"		"TARGET"
+				"HealAmount"	"%heal"
+			}
+			
+		}
+
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"		"FIELD_INTEGER"
+				"heal"			"100 200 300 400"
+			}
+			
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Archer: Netshot
+	//=================================================================================================================
+	"castlewars_archer_netshot"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"windrunner_shackleshot"
+		"ID"							"5130"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"12.0 12.0 12.0 12.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"0 0 0 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"90 100 110 120"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"fail_stun_duration"	"0.75 0.75 0.75 0.75"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.5 2.25 3.0 3.75"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"shackle_distance"		"525 525 525 525"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"arrow_speed"			"1515"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"shackle_count"			"1"
+			}
+		}
+	}
+
+
+
+	//=================================================================================================================
+	// Archer: Volley
+	//=================================================================================================================
+	"castlewars_archer_volley"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"legion_commander_overwhelming_odds"
+		"ID"							"5595"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"18.0 18.0 18.0 18.0"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100 100 100 100"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"330"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"60 100 140 180"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_unit"		"14 16 18 20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_hero"		"20 35 50 65"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"illusion_dmg_pct"		"25"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_speed_creeps"		"3"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_speed_heroes"		"9"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"7.0"
+			}
+		}
+	}
 
 
 
@@ -357,10 +543,4 @@
 
 
 
-
-
-
-
-
-	
 }

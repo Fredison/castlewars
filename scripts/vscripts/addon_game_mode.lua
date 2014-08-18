@@ -6,14 +6,13 @@ end
 
 function Precache(context)
 	PrecacheUnitByNameSync("npc_dota_hero_axe", context);
-	--[[
-		Precache things we know we'll use.  Possible file types include (but not limited to):
-			PrecacheResource( "model", "*.vmdl", context )
-			PrecacheResource( "soundfile", "*.vsndevts", context )
-			PrecacheResource( "particle", "*.vpcf", context )
-			PrecacheResource( "particle_folder", "particles/folder", context )
-	]]
+	local units = LoadKeyValues("scripts/npc/npc_units_custom.txt");
+	for k, v in pairs(units) do
+  PrecacheUnitByNameAsync(k, Kappa);
+ end
 end
+
+function Kappa() end
 
 -- Create the game mode when we activate
 function Activate()
