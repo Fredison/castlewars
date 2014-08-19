@@ -90,6 +90,10 @@
 		}
 	}
 
+	//============================================================
+	// Unit: Light Guardian
+	//============================================================
+
 	"light_guardian"
 	{
 		"ArmorPhysical"		"0"
@@ -127,6 +131,7 @@
 		"BountyGoldMin"		"0"
 		"BountyGoldMax"		"0"
 		"StatusHealth"		"75"
+		"Ability 1"			"protect"
 	}
 
 

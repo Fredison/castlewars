@@ -276,6 +276,37 @@
 		}
 	}
 
+
+	//============================================================
+	// Light Guardian: Protect
+	//============================================================
+	"protect"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"MaxLevel"						"1"
+		"AbilityTextureName"			"phantom_assassin_blur"
+		"Modifiers"
+		{
+			"protect"
+			{
+				"Passive"		"1"
+				""
+			}
+		}
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"heal"				"2 3 4 5"
+			}
+		}
+	}
+
+
 	//=================================================================================================================
 	// Paladin: Holy Blessing
 	//=================================================================================================================
@@ -330,38 +361,6 @@
 
 
 //ARCHER
-
-	//=================================================================================================================
-	// Archer: 
-	//=================================================================================================================
-	"castlewars_archer_steady_aim"
-	{
-		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityTextureName"			"omniknight_purification"
-		
-		"Modifiers"
-		{
-			"modifier_archer_steady_aim"
-				{
-					"Passive"		"1"
-					"Properties"
-					{
-						MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT	"%attackspeed"					}
-				}
-		}
-		
-		"AbilitySpecial"
-		{
-			"01"
-			 {
-			 	"var_type"		"FIELD_INTEGER"
-			 	"attackspeed"	"15 30 45 60"
-			 }
-		}
-	}
-
-
 
 
 	//=================================================================================================================
@@ -492,6 +491,72 @@
 	}
 
 
+	//=================================================================================================================
+	// Archer: Steady Aim
+	//=================================================================================================================
+	"castlewars_archer_steady_aim"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"omniknight_purification"
+		
+		"Modifiers"
+		{
+			"modifier_archer_steady_aim"
+				{
+					"Passive"		"1"
+					"Properties"
+					{
+						MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT	"%attackspeed"					}
+				}
+		}
+		
+		"AbilitySpecial"
+		{
+			"01"
+			 {
+			 	"var_type"		"FIELD_INTEGER"
+			 	"attackspeed"	"15 30 45 60"
+			 }
+		}
+	}
+
+
+	//=================================================================================================================
+	// Archer: Concussive Blow
+	//=================================================================================================================
+	"castlewars_archer_concussive_blow"
+
+	"BaseClass"					"ability_datadriven"
+	"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+
+
+
+//ENGINEER
+
+	//=================================================================================================================
+	// Engineer: Build Sentry
+	//=================================================================================================================
+	"castlewars_engineer_build_sentry"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
+
+
+
+
+
+
+
+	}
+
+	//=================================================================================================================
+	// Engineer: Build Mini Sentry
+	//=================================================================================================================
+	"castlewars_engineer_build_mini_sentry"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_POINT"
 
 
 
@@ -501,9 +566,87 @@
 
 
 
+	}
+
+	//=================================================================================================================
+	// Engineer: Rig Explosive
+	//=================================================================================================================
+	"castlewars_engineer_rig_explosive"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"techies_land_mines""
+		"ID"							"5599"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_COMPOSITE"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0 20.0 15.0 10.0"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"125 150 175 205"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"max_mines"					"20"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"small_radius"				"200"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"big_radius"				"500"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"200 300 400 500"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"activation_time"			"1.75"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"explode_delay"				"0.3"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_time"					"2.0"
+			}
+		}
+	}
 
 
 
+	//=================================================================================================================
+	// Engineer: Teleporter
+	//=================================================================================================================
+	"castlewars_engineer_"
+
+
+	//=================================================================================================================
+	// Engineer: Upgrade
+	//=================================================================================================================
+	"castlewars_engineer_upgrade"
 
 
 
