@@ -334,39 +334,33 @@
 	//=================================================================================================================
 	// Archer: 
 	//=================================================================================================================
-	"castlewars_archer_"
+	"castlewars_archer_steady_aim"
 	{
 		"BaseClass"						"ability_datadriven"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"omniknight_purification"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityManaCost"				"80 100 120 140"
-		"AbilityCooldown"				"8"
-		"AbilityCastRange"				"400 450 500 550"
-
 		
-		"OnSpellStart"
+		"Modifiers"
 		{
-			"Heal"
-			{
-				"Target"		"TARGET"
-				"HealAmount"	"%heal"
-			}
-			
+			"modifier_archer_steady_aim"
+				{
+					"Passive"		"1"
+					"Properties"
+					{
+						MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT	"%attackspeed"					}
+				}
 		}
-
-
+		
 		"AbilitySpecial"
 		{
 			"01"
-			{
-				"var_type"		"FIELD_INTEGER"
-				"heal"			"100 200 300 400"
-			}
-			
+			 {
+			 	"var_type"		"FIELD_INTEGER"
+			 	"attackspeed"	"15 30 45 60"
+			 }
 		}
 	}
+
 
 
 
@@ -377,29 +371,23 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"windrunner_shackleshot"
-		"ID"							"5130"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"BaseClass"				"meepo_earthbind"
+		"ID"					"5430"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"FightRecapLevel"				"1"
-
+		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"800"
-		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		"AbilityCastRange"				"500 750 1000 1250"
+		"AbilityCastPoint"				"0.3"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"12.0 12.0 12.0 12.0"
-
-		// Damage.
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"0 0 0 0"
+		"AbilityCooldown"				"20 16 12 8"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90 100 110 120"
+		"AbilityManaCost"				"100"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -408,27 +396,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"fail_stun_duration"	"0.75 0.75 0.75 0.75"
+				"duration"				"2.0"
 			}
 			"02"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.5 2.25 3.0 3.75"
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"220"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"shackle_distance"		"525 525 525 525"
+				"speed"					"857"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"arrow_speed"			"1515"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"shackle_count"			"1"
+				"tooltip_range"			"500 750 1000 1250"
 			}
 		}
 	}
